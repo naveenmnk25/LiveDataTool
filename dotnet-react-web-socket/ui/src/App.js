@@ -2,8 +2,8 @@ import './App.css';
 import React from 'react';
 import { WebSocketProvider } from './context/WebSocket';
 import { WebSocketMonitoring } from './components/WebSocketMonitoring';
-import { BaseConfig } from './config/AppConfig';
 import FactoryList from './components/FactoryList';
+import { BaseConfig } from './config/AppConfig';
 
 const factoryArray = [
   { id: 1, name: 'Fabrika 1', state: true, message: '' },
@@ -19,6 +19,7 @@ function App() {
     <WebSocketProvider>
       <WebSocketMonitoring state={BaseConfig.webSocketState.CLOSED} />
       <FactoryList factoryArray={factoryArray} />
+      
     </WebSocketProvider>
   );
 }

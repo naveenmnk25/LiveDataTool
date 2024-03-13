@@ -9,10 +9,10 @@ namespace FactoryControl.Dto
     {
         public class Update
         {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public bool Status { get; set; }
-            public string Message { get; set; }
-        }
+			public int Id { get; set; }
+			public string Timestamp { get; set; }
+			public int Price { get; set; }
+			public string Message { get; set; }
+		}
     }
 }

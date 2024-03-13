@@ -73,9 +73,10 @@ namespace FactoryControl
                     // You can check header and request in here. For example
                     // if(context.Response.Headers...)
                     // if(context.Request.Query...)
-
-                    // We just check IsWebSocketRequest
-                    if (context.WebSockets.IsWebSocketRequest)
+                    var X = context.Response.Headers;
+                    var X1 = context.Request.Query;
+					// We just check IsWebSocketRequest
+					if (context.WebSockets.IsWebSocketRequest)
                     {
                         // We accept the socket connection
                         WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();

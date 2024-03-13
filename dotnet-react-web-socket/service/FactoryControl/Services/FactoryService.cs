@@ -29,8 +29,9 @@ namespace FactoryControl.Services
                 SampleData.Factory factory = SampleData.FactoryList.FirstOrDefault(w => w.Id == update.Id);
                 if (factory == null) throw new ArgumentNullException();
 
-                factory.Name = update.Name;
-                factory.Status = update.Status;
+                var datetime = new DateTime();
+                factory.Timestamp = datetime.ToString();
+                factory.Price = update.Price;
                 factory.Message = update.Message;
 
                 var x = SampleData.FactoryList;
@@ -48,9 +49,10 @@ namespace FactoryControl.Services
 			try
 			{
 				SampleData.Factory factory = new SampleData.Factory();
+				var datetime = DateTime.Now;
 				factory.Id = dynamicValue;
-				factory.Name = "Name"+ dynamicValue;
-				factory.Status =true;
+				factory.Timestamp = datetime.ToString("yyyy-MM-dd HH:mm:ss");
+				factory.Price =100+ dynamicValue;
 				factory.Message ="message";
 
 				SampleData.FactoryList.Add(factory);
