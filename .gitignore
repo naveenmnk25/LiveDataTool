@@ -8,3 +8,7 @@
 /WebApi/WebApi/obj
 /websocket/websocket/obj
 /websocket/.vs
+/dotnet-react-web-socket/service/.vs
+/dotnet-react-web-socket/service/FactoryControl/bin/Debug/netcoreapp3.1
+/dotnet-react-web-socket/service/FactoryControl/obj
+/websocket/websocket/bin/Debug/net8.0

@@ -6,10 +6,12 @@ import { logout } from "../../slices/auth";
 import eventBus from "../../common/EventBus";
 import { PathConstants } from "../../Route/path-constants";
 import "./home.css";
+import GraphComponent from "../graph/GraphComponent";
 
 const Home = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
   const [showAdminBoard, setShowAdminBoard] = useState(false);
+  const { factoryList } = useSelector((state) => state.auth);
 
   const { user: currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -198,7 +200,11 @@ const Home = () => {
           <i className="bx bx-menu">☰</i>
           <span className="text">Crypto App</span>
         </div>
+        <section>
+      <GraphComponent/>
       </section>
+      </section>
+     
       {/* <a href={PathConstants.SMLOGIN} className="nav-link" onClick={logOut}>
                   LogOut
                 </a> */}
